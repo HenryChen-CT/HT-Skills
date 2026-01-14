@@ -18,17 +18,6 @@ skill-creator add-skill --pwd "/Users/sunrise/.claude/skills/jira-test-doc" [--t
 # Search documentation
 skill-creator search-skill --pwd "/Users/sunrise/.claude/skills/jira-test-doc" "query" [--mode=auto|chroma|fuzzy]
 
-# Download Context7 docs
-skill-creator download-context7 --pwd "/Users/sunrise/.claude/skills/jira-test-doc" <context7_library_id>
-
-# Update Context7 docs
-skill-creator download-context7 --pwd "/Users/sunrise/.claude/skills/jira-test-doc" --force [<context7_library_id>]
-
-# List all Context7 projects
-skill-creator list-context7 --pwd "/Users/sunrise/.claude/skills/jira-test-doc"
-
-# Remove Context7 project
-skill-creator remove-context7 --pwd "/Users/sunrise/.claude/skills/jira-test-doc" <context7_library_id>
 ```
 
 ## User Skills
@@ -60,7 +49,3 @@ skill-creator remove-context7 --pwd "/Users/sunrise/.claude/skills/jira-test-doc
 - update_summary_simplified_format.md
 - usage_and_workflow.md
 </user-skills>
-
-## Context7 Documentation
-
-<!-- Context7 projects will be listed here automatically -->
