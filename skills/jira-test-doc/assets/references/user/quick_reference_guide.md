@@ -103,7 +103,9 @@ Need help? Search the skill docs:
 
 ```bash
 # Search for specific topics
-skill-creator search-skill --pwd "/Users/sunrise/.claude/skills/jira-test-doc" "filtering logic"
-skill-creator search-skill --pwd "/Users/sunrise/.claude/skills/jira-test-doc" "formatting"
-skill-creator search-skill --pwd "/Users/sunrise/.claude/skills/jira-test-doc" "examples"
+skill-creator search-skill --pwd "<SKILL_DIR>" "filtering logic"
+skill-creator search-skill --pwd "<SKILL_DIR>" "formatting"
+skill-creator search-skill --pwd "<SKILL_DIR>" "examples"
 ```
+
+**Note**: Replace `<SKILL_DIR>` with your skill installation path (typically `~/.claude/skills/jira-test-doc`)

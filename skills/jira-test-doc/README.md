@@ -2,6 +2,21 @@
 
 Generate QA-friendly test documentation from Jira tickets and Git commits.
 
+## One-Time Setup
+
+Add this to your shell config (`~/.zshrc` or `~/.bashrc`):
+
+```bash
+export JIRA_TEST_DOC_DIR="$HOME/.claude/skills/jira-test-doc"
+```
+
+Then reload your shell:
+```bash
+source ~/.zshrc  # or source ~/.bashrc
+```
+
+This allows you to use `$JIRA_TEST_DOC_DIR` in all commands below.
+
 ## Quick Start
 
 ```bash
@@ -116,20 +131,22 @@ Full documentation available in `assets/references/user/`:
 ## Search Documentation
 
 ```bash
-skill-creator search-skill --pwd "/Users/sunrise/.claude/skills/jira-test-doc" "query"
+skill-creator search-skill --pwd "$JIRA_TEST_DOC_DIR" "query"
 ```
 
 Examples:
 ```bash
 # Search for formatting tips
-skill-creator search-skill --pwd "/Users/sunrise/.claude/skills/jira-test-doc" "formatting"
+skill-creator search-skill --pwd "$JIRA_TEST_DOC_DIR" "formatting"
 
 # Search for filtering examples
-skill-creator search-skill --pwd "/Users/sunrise/.claude/skills/jira-test-doc" "filtering logic"
+skill-creator search-skill --pwd "$JIRA_TEST_DOC_DIR" "filtering logic"
 
 # Search for examples
-skill-creator search-skill --pwd "/Users/sunrise/.claude/skills/jira-test-doc" "example"
+skill-creator search-skill --pwd "$JIRA_TEST_DOC_DIR" "example"
 ```
+
+**Note**: Make sure you've completed the one-time setup above to set `$JIRA_TEST_DOC_DIR`.
 
 ## Typical Workflow
 

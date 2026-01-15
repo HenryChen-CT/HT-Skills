@@ -9,14 +9,24 @@ description: |
 
 Generate QA-friendly test documentation from Jira ticket and related commits, then post as Jira comment
 
+## Setup
+
+Set the environment variable once:
+
+```bash
+export JIRA_TEST_DOC_DIR="$HOME/.claude/skills/jira-test-doc"
+```
+
+Add this to your `~/.zshrc` or `~/.bashrc` to make it permanent.
+
 ## CLI Commands
 
 ```bash
 # Add user content
-skill-creator add-skill --pwd "/Users/sunrise/.claude/skills/jira-test-doc" [--title "Title" --content "Content"]|[--file=*.md]
+skill-creator add-skill --pwd "$JIRA_TEST_DOC_DIR" [--title "Title" --content "Content"]|[--file=*.md]
 
 # Search documentation
-skill-creator search-skill --pwd "/Users/sunrise/.claude/skills/jira-test-doc" "query" [--mode=auto|chroma|fuzzy]
+skill-creator search-skill --pwd "$JIRA_TEST_DOC_DIR" "query" [--mode=auto|chroma|fuzzy]
 
 ```
 

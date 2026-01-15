@@ -6,7 +6,19 @@
 A Claude Code skill that automatically generates QA-friendly test documentation from Jira tickets and Git commits.
 
 ## Installation
-Already installed at: `/Users/sunrise/.claude/skills/jira-test-doc`
+Typically installed at: `~/.claude/skills/jira-test-doc`
+
+## One-Time Setup
+
+Add this to your shell config (`~/.zshrc` or `~/.bashrc`):
+
+```bash
+export JIRA_TEST_DOC_DIR="$HOME/.claude/skills/jira-test-doc"
+```
+
+Then reload: `source ~/.zshrc` (or `~/.bashrc`)
+
+This allows you to use `$JIRA_TEST_DOC_DIR` in all commands.
 
 ## Quick Usage
 ```bash
@@ -39,10 +51,10 @@ The skill generates Jira-formatted documentation IN ENGLISH with three sections:
 ## Common Commands
 ```bash
 # Search the skill documentation
-skill-creator search-skill --pwd "/Users/sunrise/.claude/skills/jira-test-doc" "workflow"
+skill-creator search-skill --pwd "$JIRA_TEST_DOC_DIR" "workflow"
 
 # Add custom knowledge
-skill-creator add-skill --pwd "/Users/sunrise/.claude/skills/jira-test-doc" --title "My Pattern" --content "..."
+skill-creator add-skill --pwd "$JIRA_TEST_DOC_DIR" --title "My Pattern" --content "..."
 ```
 
 ## Need Help?
